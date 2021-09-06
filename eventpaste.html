@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input  onpaste="return paste()" type="text"> <span id="msg"></span>
+        <script>
+            function paste(){
+                document.getElementById("msg").innerHTML="You can't paste";
+                return false;
+            }
+        </script>
+
+    </body>
+</html>

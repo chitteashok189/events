@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            div{
+                position: absolute;
+                top:50%;
+                width:400px;
+                height:300px;
+                background-color: chartreuse;
+                border-radius: 10px;
+            }
+            div video{
+                width:300px;
+                margin:40px;
+            }
+            .hidden{
+                left:-50%;
+            }
+            .show{
+                left:50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <button id="button">Display Video</button>
+        <div id="div" class="hidden">
+            <video id="video">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+
+            </video>
+            
+
+        </div>
+        <script>
+            var btn=document.getElementById("button");
+            var videoBox=document.getElementById("div");
+            var video=document.getElementById("video");
+            btn.onclick=function(){
+                videoBox.setAttribute("class","show");
+            }
+            videoBox.onclick=function(){
+                videoBox.setAttribute("class","hidden");
+            }
+            video.onclick=function(){
+                video.play();
+                event.stopPropagation();
+            }
+        </script>
+
+    </body>
+</html>

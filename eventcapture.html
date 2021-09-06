@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            body *{
+                margin: 10px;
+                border:1px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form id="form">Fom
+            <div id="div">Div
+                <p id="p">P</p>
+            </div>
+        </form>
+        <script>
+            var form=document.getElementById("form");
+            var div=document.getElementById("div");
+            var p=document.getElementById("p");
+            var formholder=function(){
+                alert("form clicked");
+            }
+            var divholder=function(){
+                alert("div clicked");
+            }
+            var p1holder=function(){
+                alert("p1 clicked");
+                // event.stopImmediatePropagation();
+            }
+            var p2holder=function(){
+                alert("p2 clicked");
+            }
+            form.addEventListener("click",formholder,true);
+            div.addEventListener("click",divholder,true);
+            p.addEventListener("click",p1holder,true);
+            p.addEventListener("click",p2holder,true);
+            
+
+        </script>
+    </body>
+</html>

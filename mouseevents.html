@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            img{
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    <body>
+        <img onmouseover="zoomin()" width="125px" height="150px" id="image"  onmouseout="zoomout()" src="https://rukminim1.flixcart.com/image/150/150/kqttg280/jean/x/l/1/32-mss21jn806-metronaut-original-imag4r9adjpxj2uz.jpeg?q=70">
+    <script>
+        var image=document.getElementById("image");
+        function zoomin(){
+            image.style.width="135px";
+            image.style.height="160px";
+        }
+        function zoomout(){
+            image.style.width="125px";
+            image.style.height="150px";
+        }
+    </script>
+    </body>
+</html>

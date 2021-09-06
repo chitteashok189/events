@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input  oncopy="return copy()" type="text"> <span id="msg"></span>
+        <script>
+            function copy(){
+                document.getElementById("msg").innerHTML="You can't copy";
+                return false;
+            }
+        </script>
+
+    </body>
+</html>
